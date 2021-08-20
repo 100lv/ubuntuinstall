@@ -66,7 +66,7 @@ echo "/dev/plotvg/tmpdir /chia/tmpdir" >> /dev/fstab
 
 #sudo mount -t tmpfs -o size=110G tmpfs /mnt/ram/
 # tmpfs       /mnt/ramdisk tmpfs   nodev,nosuid,noexec,nodiratime,size=1024M   0 0
-echo "tmpfs       /chia/tmpdir2 tmpfs   size=110G"
+echo "tmpfs       /chia/tmpdir2 tmpfs   size=110G" >> /etc/fstab
 #  TESTED Till this line
 
 
