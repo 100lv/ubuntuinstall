@@ -41,8 +41,17 @@ rm linux-modules-5.12.19-051219-generic_5.12.19-051219.202107201136_amd64.deb
 # Create a new partition for CHIA Temp
 
 read -p "Create a new partition"
-echo "/dev/nvme0n1p5 : start=    88057856, size=   912157327, type=0FC63DAF-8483-4772-8E79-3D69D8477DE4" > sudo sfdisk /dev/nvme0
-sfdisk /dev/nvme0n1
+# echo "/dev/nvme0n1p5 : start=    88057856, size=   912157327, type=0FC63DAF-8483-4772-8E79-3D69D8477DE4" > sudo sfdisk /dev/nvme0
+# sfdisk /dev/nvme0n1
+
+(
+echo n # Add a new partition
+echo 5 # Partition number
+echo   # First sector (Accept default: 1)
+echo   # Last sector (Accept default: varies)
+echo w # Write changes
+) | sudo fdisk
+
 
 read -p "Create Logical volume"
 
