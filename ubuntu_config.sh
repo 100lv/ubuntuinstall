@@ -50,7 +50,8 @@ echo 5 # Partition number
 echo   # First sector (Accept default: 1)
 echo   # Last sector (Accept default: varies)
 echo w # Write changes
-) | sudo fdisk
+) | sudo fdisk /dev/nvme0n1
+
 
 
 read -p "Create Logical volume"
@@ -60,7 +61,14 @@ sudo vgcreate plotvg /dev/nvme0n1p5
 sudo lvcreate -n tmpdir -l 100%FREE plotvg
 sudo mkfs.xfs /dev/plotvg/tmpdir
 sudo mkdir -p /chia/tmpdir
-sudo mount //dev/plotvg/tmpdir /chia/tmpdir
+# sudo mount //dev/plotvg/tmpdir /chia/tmpdir
+echo "/dev/plotvg/tmpdir /chia/tmpdir" >> /dev/fstab
+
+#sudo mount -t tmpfs -o size=110G tmpfs /mnt/ram/
+# tmpfs       /mnt/ramdisk tmpfs   nodev,nosuid,noexec,nodiratime,size=1024M   0 0
+echo "tmpfs       /chia/tmpdir2 tmpfs   size=110G"
+#  TESTED Till this line
+
 
 
 
