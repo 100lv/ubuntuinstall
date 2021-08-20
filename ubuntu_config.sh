@@ -36,6 +36,10 @@ rm linux-headers-5.12.19-051219_5.12.19-051219.202107201136_all.deb
 rm linux-image-unsigned-5.12.19-051219-generic_5.12.19-051219.202107201136_amd64.deb
 rm linux-modules-5.12.19-051219-generic_5.12.19-051219.202107201136_amd64.deb
 
+# Disable sleep
+read -p "Disable sleep mode"
+
+systemctl mask sleep.target suspend.target hybrid-sleep.target hibernate.target
 
 
 # Create a new partition for CHIA Temp
@@ -62,13 +66,23 @@ sudo lvcreate -n tmpdir -l 100%FREE plotvg
 sudo mkfs.xfs /dev/plotvg/tmpdir
 sudo mkdir -p /chia/tmpdir
 # sudo mount //dev/plotvg/tmpdir /chia/tmpdir
-echo "/dev/plotvg/tmpdir /chia/tmpdir" >> /dev/fstab
+echo "/dev/plotvg/tmpdir    /chia/tmpdir   xfs" >> /dev/fstab
 
 #sudo mount -t tmpfs -o size=110G tmpfs /mnt/ram/
 # tmpfs       /mnt/ramdisk tmpfs   nodev,nosuid,noexec,nodiratime,size=1024M   0 0
 echo "tmpfs       /chia/tmpdir2 tmpfs   size=110G" >> /etc/fstab
-#  TESTED Till this line
+mount -a
 
 
 
+#### Install MAD Max CHIA Plotter
+mkdir chia-plotter
+apt install -y libsodium-dev cmake g++ git build-essential
+# Checkout the source and install
+git clone https://github.com/madMAx43v3r/chia-plotter.git 
+cd chia-plotter
+
+git submodule update --init
+./make_devel.sh
+./build/chia_plot --help
 
