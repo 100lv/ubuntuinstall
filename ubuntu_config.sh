@@ -86,3 +86,11 @@ git submodule update --init
 ./make_devel.sh
 ./build/chia_plot --help
 
+
+
+
+# FInish
+
+read -p "System should be rebooted
+reboot
+
