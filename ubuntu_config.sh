@@ -88,6 +88,33 @@ git submodule update --init
 
 
 
+###############################
+# Some fine tunning
+###############################
+
+##### Remove snap
+# First snaps
+
+ snap remove --purge lxd
+ snap remove --purge core18
+ snap remove --purge core20
+ snap remove --purge snapd
+
+# Clear snap Cache
+
+ rm -rf /var/cache/snapd/
+ apt autoremove --purge snapd gnome-software-plugin-snap
+ rm -fr ~/snap
+
+
+# Stop snap service
+
+apt-mark hold snapd
+
+
+
+
+
 
 # FInish
 
