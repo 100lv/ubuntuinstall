@@ -95,6 +95,8 @@ git submodule update --init
 ##### Remove snap
 # First snaps
 
+read -p "Create Logical volume"
+
  snap remove --purge lxd
  snap remove --purge core18
  snap remove --purge core20
@@ -116,8 +118,23 @@ apt-mark hold snapd
 
 
 
-# FInish
+# Finish
 
 read -p "System should be rebooted
 reboot
+
+
+
+#################### Add disk subsystem
+
+# Configure iSCSI
+# Add LUN
+# Check FS
+
+
+
+
+
+
+
 
