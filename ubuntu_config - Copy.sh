@@ -1,5 +1,6 @@
 # Bash script
 # This script prepares CHIA Plotter system
+<<<<<<< HEAD
 # Version 1.1
 # 31 August 2021
 # Svetoslav Tolev
@@ -8,6 +9,13 @@
 
 read -p "Welcom to Chia Plotter install"
 
+=======
+# Version 1.0
+# 20 August 2021
+# Svetoslav Tolev
+
+# #######
+>>>>>>> 3422808ccb052756f69f5c8ff837a701cfc0dbc2
 
 
 read -p "Starting configuration. Each and evey command now requests pressing ENTER to continue"
