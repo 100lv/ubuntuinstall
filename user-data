@@ -1,4 +1,3 @@
-chiaplot@chiapd001:/var/log$ sudo cat /var/log/installer/autoinstall-user-data
 #cloud-config
 autoinstall:
   apt:
