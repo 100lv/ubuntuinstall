@@ -123,7 +123,7 @@ apt-mark hold snapd
 
 # Finish
 
-read -p "System should be rebooted
+read -p "System should be rebooted"
 reboot
 
 
