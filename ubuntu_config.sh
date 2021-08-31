@@ -66,11 +66,12 @@ sudo lvcreate -n tmpdir -l 100%FREE plotvg
 sudo mkfs.xfs /dev/plotvg/tmpdir
 sudo mkdir -p /chia/tmpdir
 # sudo mount //dev/plotvg/tmpdir /chia/tmpdir
-echo "/dev/plotvg/tmpdir    /chia/tmpdir   xfs" >> /dev/fstab
+echo "/dev/plotvg/tmpdir    /chia/tmpdir   xfs" >> /etc/fstab
 
 #sudo mount -t tmpfs -o size=110G tmpfs /mnt/ram/
 # tmpfs       /mnt/ramdisk tmpfs   nodev,nosuid,noexec,nodiratime,size=1024M   0 0
 echo "tmpfs       /chia/tmpdir2 tmpfs   size=110G" >> /etc/fstab
+
 mount -a
 
 
@@ -85,6 +86,18 @@ cd chia-plotter
 git submodule update --init
 ./make_devel.sh
 ./build/chia_plot --help
+
+
+### Install CHIA harvester - TODO
+
+### Configure CHIA Harvester - TODO
+
+### Add service for Mad Max Plotter - TODO
+
+
+
+
+
 
 
 
@@ -105,14 +118,13 @@ read -p "Create Logical volume"
 # Clear snap Cache
 
  rm -rf /var/cache/snapd/
- apt autoremove --purge snapd gnome-software-plugin-snap
+ apt autoremove --purge snapd gnome-software-plugin-snap -y
  rm -fr ~/snap
 
 
 # Stop snap service
 
 apt-mark hold snapd
-
 
 
 
@@ -127,14 +139,7 @@ reboot
 
 #################### Add disk subsystem
 
-# Configure iSCSI
-# Add LUN
-# Check FS
-
-
-
-
-
-
-
+# Configure iSCSI - TODO
+# Add LUN - TODO
+# Check FS - TODO
 
