@@ -6,19 +6,15 @@
 
 # ########### 
 
-read -p "Welcom to Chia Plotter install"
-
-
+read -p "Welcome to Chia Plotter configurator. Press ENTER to continue."
 
 read -p "Starting configuration. Each and evey command now requests pressing ENTER to continue"
 
 read -p "Starting system update"
 
-
 # Next few linex upgrade systm to latest level
 apt update
 apt upgrade -y
-
 
 read -p "Now we will upgrade the kernel to fix the isssues with Intel adapter"
 
@@ -100,7 +96,7 @@ git submodule update --init
 
 ### Add service for Mad Max Plotter - TODO
 
-
+### Add Service for CHIA Harvester
 
 
 
@@ -110,6 +106,8 @@ git submodule update --init
 ###############################
 # Some fine tunning
 ###############################
+
+
 
 ##### Remove snap
 # First snaps
