@@ -108,7 +108,7 @@ git submodule update --init
 ##### Remove snap
 # First snaps
 
-read -p "Create Logical volume"
+read -p "Remo snaps services"
 
  snap remove --purge lxd
  snap remove --purge core18
