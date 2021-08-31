@@ -4,6 +4,9 @@
 # 20 August 2021
 # Svetoslav Tolev
 
+# #######
+
+
 read -p "Starting configuration. Each and evey command now requests pressing ENTER to continue"
 
 read -p "Starting system update"
