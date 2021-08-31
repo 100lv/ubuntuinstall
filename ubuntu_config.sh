@@ -4,7 +4,9 @@
 # 31 August 2021
 # Svetoslav Tolev
 
-# #######
+# ########### 
+
+read -p "Welcom to Chia Plotter install"
 
 
 
