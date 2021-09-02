@@ -100,7 +100,11 @@ git submodule update --init
 
 ### Add GRUB for chia plot for Mad Max Plotter - TODO
 
-wget 
+wget https://github.com/100lv/ubuntuinstall/raw/main/chia_madmax_start.sh
+chmod +x chia_madmax_start.sh
+wget https://github.com/100lv/ubuntuinstall/raw/main/madmax.service
+mv madmax.service /etc/systemd/system
+sudo systemctl enable madmax.service
 
 
 
