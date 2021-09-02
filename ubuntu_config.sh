@@ -67,6 +67,7 @@ sudo vgcreate plotvg /dev/nvme0n1p5
 sudo lvcreate -n tmpdir -l 100%FREE plotvg
 sudo mkfs.xfs /dev/plotvg/tmpdir
 sudo mkdir -p /chia/tmpdir
+sudo mkdir /chia/dest
 # sudo mount //dev/plotvg/tmpdir /chia/tmpdir
 echo "/dev/plotvg/tmpdir    /chia/tmpdir   xfs" >> /etc/fstab
 
