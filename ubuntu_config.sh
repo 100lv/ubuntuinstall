@@ -90,11 +90,19 @@ git submodule update --init
 ./build/chia_plot --help
 
 
+
+
+
+
 ### Install CHIA harvester - TODO
 
 ### Configure CHIA Harvester - TODO
 
-### Add service for Mad Max Plotter - TODO
+### Add GRUB for chia plot for Mad Max Plotter - TODO
+
+wget 
+
+
 
 ### Add Service for CHIA Harvester
 
