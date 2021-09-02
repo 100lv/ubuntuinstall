@@ -102,9 +102,12 @@ git submodule update --init
 
 wget https://github.com/100lv/ubuntuinstall/raw/main/chia_madmax_start.sh
 chmod +x chia_madmax_start.sh
-wget https://github.com/100lv/ubuntuinstall/raw/main/madmax.service
-mv madmax.service /etc/systemd/system
-sudo systemctl enable madmax.service
+{  crontab -l; echo "@reboot /home/chpt/chia_madmax_start.sh";  | crontab - }
+
+
+# wget https://github.com/100lv/ubuntuinstall/raw/main/madmax.service
+# mv madmax.service /etc/systemd/system
+# sudo systemctl enable madmax.service
 
 
 
