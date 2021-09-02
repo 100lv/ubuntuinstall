@@ -9,7 +9,7 @@ Restart=always
 RestartSec=1
 User=root
 
-ExecStart=/home/chpt/chia_madmax_start.sh >> /home/chph/madmax.log
+ExecStart=/home/chpt/chia_madmax_start.sh >> /home/chpt/madmax.log
 # ExecStop=/usr/bin/env chia stop all -d
 [Install]
 WantedBy=multi-user.target
