@@ -1,6 +1,6 @@
 # Bash script
 # This script prepares CHIA Plotter system
-# Version 1.2
+# Version 1.3 - Add grub to plot on reboot
 # 31 August 2021
 # Svetoslav Tolev
 
