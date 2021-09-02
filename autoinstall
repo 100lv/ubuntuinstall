@@ -1,4 +1,3 @@
-chiaplot@chiapd001:/var/log$ sudo cat /var/log/installer/autoinstall-user-data
 #cloud-config
 autoinstall:
   apt:
@@ -9,8 +8,8 @@ autoinstall:
       uri: http://bg.archive.ubuntu.com/ubuntu
     - arches: [default]
       uri: http://ports.ubuntu.com/ubuntu-ports
-  identity: {hostname: chiapd001, password: $6$mqxr5G7ZJ1twpHn.$IpasD8o/omfS8oFI8SuXiG0zLsaPdXHscnE7oAvk4q2K/x/5Bf0oQe.dkwj4d6yKdnoJudYTRDnAR1IRGBVQF.,
-    realname: Chia Plotter, username: chiaplot}
+  identity: {hostname: chiapd002, password: $6$mqxr5G7ZJ1twpHn.$IpasD8o/omfS8oFI8SuXiG0zLsaPdXHscnE7oAvk4q2K/x/5Bf0oQe.dkwj4d6yKdnoJudYTRDnAR1IRGBVQF.,
+    realname: Chia Plotter, username: chpt}
   keyboard: {layout: us, toggle: null, variant: ''}
   locale: en_US.UTF-8
   network:
