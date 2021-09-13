@@ -99,7 +99,7 @@ git submodule update --init
 
 ### Configure CHIA Harvester - TODO
 
-### Add GRUB for chia plot for Mad Max Plotter - TODO
+### Add CRON for chia plot for Mad Max Plotter - TODO
 
 wget https://github.com/100lv/ubuntuinstall/raw/main/chia_madmax_start.sh
 chmod +x chia_madmax_start.sh
