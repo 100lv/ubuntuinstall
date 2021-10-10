@@ -1,0 +1,25 @@
+[Unit]
+Description=chia-monitor
+After=network.target
+AssertPathExists=/home/chiaplot/chia-monitor
+
+[Service]
+User=chia-monitor
+Group=chia-monitor
+Type=simple
+
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=chia-monitor
+
+KillMode=mixed
+SendSIGKILL=yes
+TimeoutSec=30
+
+WorkingDirectory=//home/chiaplot/chia-monitor
+ExecStart=/usr/bin/pipenv run python -m monitor
+Restart=always
+RestartSec=600
+
+[Install]
+WantedBy=multi-user.target
