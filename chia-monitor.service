@@ -4,20 +4,18 @@ After=network.target
 AssertPathExists=/home/chiaplot/chia-monitor
 
 [Service]
-User=chia-monitor
-Group=chia-monitor
+Environment="CHIA_ROOT=/home/chiaplot/.chia/mainnet"
+User=chiaplot
 Type=simple
 
-StandardOutput=syslog
-StandardError=syslog
 SyslogIdentifier=chia-monitor
 
 KillMode=mixed
 SendSIGKILL=yes
 TimeoutSec=30
 
-WorkingDirectory=//home/chiaplot/chia-monitor
-ExecStart=/usr/bin/pipenv run python -m monitor
+WorkingDirectory=/home/chiaplot/chia-monitor
+ExecStart=/home/chiaplot/chia-blockchain/venv/bin/python -m monitor
 Restart=always
 RestartSec=600
 
